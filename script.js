@@ -66,7 +66,7 @@ function analyze() {
   } else if (score < 15) {
     result = "Have a balanced day in Shibuya.";
   } else {
-    result = "Take it easy and relax today.";
+    result = "Take it easy and relax today in Shibuya.";
   }
 
   document.getElementById("result").innerText = result;
