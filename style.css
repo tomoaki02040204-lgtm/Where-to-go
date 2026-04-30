@@ -72,3 +72,33 @@ button:hover {
   text-align: center;
   font-size: 18px;
 }
+
+/* ラジオボタンを非表示 */
+input[type="radio"] {
+  display: none;
+}
+
+/* 選択肢をボタン化 */
+.option {
+  display: block;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background: #f0f2ff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* ホバー */
+.option:hover {
+  background: #e0e5ff;
+}
+
+/* 選択された状態 */
+input[type="radio"]:checked + .option {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: 2px solid #5a67d8;
+  font-weight: bold;
+}
