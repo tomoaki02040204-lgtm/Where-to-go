@@ -31,13 +31,13 @@ function generateQuestions() {
     let html = `<div class="question"><p>${q}</p>`;
 
     options.forEach((opt, j) => {
-      html += `
-        <label>
-          <input type="radio" name="q${i}" value="${j}">
-          ${opt}
-        </label><br>
-      `;
-    });
+  html += `
+    <label>
+      <input type="radio" name="q${i}" value="${j}">
+      <span class="option">${opt}</span>
+    </label>
+  `;
+});
 
     html += "</div>";
     form.innerHTML += html;
