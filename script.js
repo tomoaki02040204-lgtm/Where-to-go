@@ -1,19 +1,25 @@
 const questionsPool = [
-  "体を動かしたい？",
-  "新しいことを学びたい？",
-  "人と話したい？",
-  "一人で集中したい？",
-  "お金を稼ぎたい？",
-  "リラックスしたい？",
-  "外出したい？",
-  "クリエイティブなことしたい？"
+  "Do you want to be physically active?",
+  "Do you want to learn something new?",
+  "Do you want to talk to people?",
+  "Do you want to focus alone?",
+  "Do you want to make money?",
+  "Do you want to relax?",
+  "Do you want to go out?",
+  "Do you want to do something creative?"
 ];
 
-const options = ["強くそう思う", "そう思う", "どちらでもない", "あまり思わない", "思わない"];
+const options = [
+  "Strongly agree",
+  "Agree",
+  "Neutral",
+  "Disagree",
+  "Strongly disagree"
+];
 
 let selectedQuestions = [];
 
-// ランダム5問生成
+// Generate 5 random questions
 function generateQuestions() {
   const shuffled = questionsPool.sort(() => 0.5 - Math.random());
   selectedQuestions = shuffled.slice(0, 5);
@@ -40,14 +46,14 @@ function generateQuestions() {
 
 generateQuestions();
 
-// 簡易分析
+// Simple analysis
 function analyze() {
   let score = 0;
 
   for (let i = 0; i < 5; i++) {
     const val = document.querySelector(`input[name="q${i}"]:checked`);
     if (!val) {
-      alert("すべて回答してください");
+      alert("Please answer all questions.");
       return;
     }
     score += parseInt(val.value);
@@ -56,12 +62,11 @@ function analyze() {
   let result = "";
 
   if (score < 8) {
-    result = "今日はアクティブに動こう！";
+    result = "Be active today!";
   } else if (score < 15) {
-    result = "バランス良く過ごそう";
+    result = "Have a balanced day.";
   } else {
-    result = "ゆっくり休もう";
+    result = "Take it easy and relax today.";
   }
 
   document.getElementById("result").innerText = result;
-}
