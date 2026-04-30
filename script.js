@@ -62,19 +62,19 @@ function analyze() {
 let result = "";
 
 if (score <= 5) {
-  result = "Go all out today! Hit the gym or explore the city.";
+  result = "Go all out today! Hit the gym or explore in Shibuya.";
 } else if (score <= 8) {
-  result = "Be active today. Try going out or doing something energetic.";
+  result = "Be active today. Try going to Shibuya or doing something energetic.";
 } else if (score <= 11) {
-  result = "A productive day fits you. Study or work on something meaningful.";
+  result = "A productive Shibuya day fits you. Study or work on something meaningful.";
 } else if (score <= 14) {
-  result = "Keep a good balance today. Mix work and relaxation.";
+  result = "Keep a good balance today. Mix work and relaxation in Shibuya.";
 } else if (score <= 17) {
-  result = "Take it slow. Maybe enjoy a quiet café or a light activity.";
+  result = "Take it slow. Maybe enjoy a quiet café or a light activity in Shibuya.";
 } else if (score <= 20) {
-  result = "You should relax today. Watch a movie or rest at home.";
+  result = "You should relax today. Watch a movie or rest in Shibuya.";
 } else {
-  result = "Full recharge mode. Take a complete break and recover.";
+  result = "Full recharge mode. Take a complete break and recover in Shibuya.";
 }
 
   document.getElementById("result").innerText = result;
