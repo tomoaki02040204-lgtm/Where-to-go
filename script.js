@@ -62,11 +62,11 @@ function analyze() {
   let result = "";
 
   if (score < 8) {
-    result = "Be active today!";
+    result = "Go Shibuya today!";
   } else if (score < 15) {
-    result = "Have a balanced day.";
+    result = "Have a balanced day in Shibuya.";
   } else {
-    result = "Take it easy and relax today.";
+    result = "Take it easy and go to Shibuya today.";
   }
 
   document.getElementById("result").innerText = result;
