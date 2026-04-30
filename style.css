@@ -1,8 +1,74 @@
+/* 全体背景 */
 body {
-  font-family: Arial;
-  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
+/* 中央カード */
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* 質問カード */
 .question {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #f5f7ff;
+  transition: 0.3s;
+}
+
+.question:hover {
+  background: #e8ecff;
+}
+
+/* ラジオボタン */
+label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* ボタン */
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 結果表示 */
+#result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f0fff4;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
 }
