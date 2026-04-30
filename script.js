@@ -21,7 +21,7 @@ let selectedQuestions = [];
 
 // Generate 5 random questions
 function generateQuestions() {
-  const shuffled = questionsPool.sort(() => 0.5 - Math.random());
+  const shuffled = [...questionsPool].sort(() => 0.5 - Math.random());
   selectedQuestions = shuffled.slice(0, 5);
 
   const form = document.getElementById("quizForm");
@@ -62,11 +62,12 @@ function analyze() {
   let result = "";
 
   if (score < 8) {
-    result = "Go Shibuya today!";
+    result = "Go to Shibuya today!";
   } else if (score < 15) {
     result = "Have a balanced day in Shibuya.";
   } else {
-    result = "Take it easy and go to Shibuya today.";
+    result = "Take it easy and relax today.";
   }
 
   document.getElementById("result").innerText = result;
+}
